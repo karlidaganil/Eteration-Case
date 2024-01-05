@@ -2,7 +2,7 @@ import { Button } from "antd";
 import Box from "../Box/Box";
 import "./style.scss";
 
-const Chart = () => {
+const ChartAndCheckout = () => {
   return (
     <div className="chart-container">
       <Box title="Chart"></Box>
@@ -18,4 +18,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default ChartAndCheckout;
