@@ -1,8 +1,7 @@
 import { Button } from "antd";
-import useStore from "./store";
-// import { useStore } from "zustand";
+import useStore from "../store";
 
-const App = () => {
+const Home = () => {
   const bears = useStore((state) => state.bears);
   const addABear = useStore((state) => state.addABear);
 
@@ -16,4 +15,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
