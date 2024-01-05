@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Radio, Space } from "antd";
-import Box from "../Box/Box";
+import Box from "../../../../../../components/Box/Box";
 
 const SortBy = () => {
   const [value, setValue] = useState(1);

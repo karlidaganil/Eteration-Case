@@ -1,7 +1,7 @@
 import { Checkbox, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
-import Box from "../Box/Box";
+import Box from "../../../../../../components/Box/Box";
 
 import "./style.scss";
 
