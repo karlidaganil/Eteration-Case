@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import Box from "../../../../components/Box/Box";
+import Box from "../Box/Box";
 import "./style.scss";
 
 const Chart = () => {
