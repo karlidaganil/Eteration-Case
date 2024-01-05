@@ -26,12 +26,14 @@ const Model = () => {
   return (
     <Box title="Model">
       <Input placeholder="Search" prefix={<SearchOutlined />} />
-      <Checkbox.Group
-        className="checkbox-vertical"
-        options={options}
-        defaultValue={["Pear"]}
-        onChange={onChange}
-      />
+      <div className="overFlow-container">
+        <Checkbox.Group
+          className="checkbox-vertical"
+          options={options}
+          defaultValue={["Pear"]}
+          onChange={onChange}
+        />
+      </div>
     </Box>
   );
 };

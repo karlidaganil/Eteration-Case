@@ -38,12 +38,14 @@ const Brands = () => {
   return (
     <Box title="Brands">
       <Input placeholder="Search" prefix={<SearchOutlined />} />
-      <Checkbox.Group
-        className="checkbox-vertical"
-        options={options}
-        defaultValue={["Pear"]}
-        onChange={onChange}
-      />
+      <div className="overFlow-container">
+        <Checkbox.Group
+          className="checkbox-vertical"
+          options={options}
+          defaultValue={["Pear"]}
+          onChange={onChange}
+        />
+      </div>
     </Box>
   );
 };
