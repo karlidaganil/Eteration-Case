@@ -4,7 +4,6 @@ import useGetProducts from "../../hooks/useGetProducts";
 
 const List = () => {
   const { products, isLoading, error } = useGetProducts();
-  console.log(products);
   return (
     <div
       style={{
