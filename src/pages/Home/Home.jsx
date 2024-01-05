@@ -1,4 +1,4 @@
-import Chart from "./components/Chart/Chart";
+import ChartAndCheckout from "./components/ChartAndCheckout/ChartAndCheckout";
 import Filters from "./components/Filters/Filters";
 import List from "./components/List/List";
 import "./style.scss";
@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home-container">
       <Filters />
       <List />
-      <Chart />
+      <ChartAndCheckout />
     </div>
   );
 };
