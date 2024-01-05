@@ -1,12 +1,15 @@
 import { Button } from "antd";
 import "./style.scss";
 
-const Item = () => {
+const Item = (props) => {
+  const { name, price, image } = props;
   return (
     <div className="item-box">
-      <div className="fake-img"></div>
-      <div className="price">15.000$</div>
-      <div className="name">iPhone 13 Pro Max 256Gb</div>
+      <div className="fake-img">
+        <img src={image} />
+      </div>
+      <div className="price">{price}$</div>
+      <div className="name">{name}</div>
       <Button type="primary">Add to Cart</Button>
     </div>
   );
