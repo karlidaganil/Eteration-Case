@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import "./style.scss";
 
 const Item = (props) => {
-  const { name, price, image } = props;
+  const { name, price, image, id } = props;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/${id}`);
+  };
   return (
-    <div className="item-box">
+    <div className="item-box" onClick={handleClick}>
       <div className="fake-img">
         <img src={image} />
       </div>
