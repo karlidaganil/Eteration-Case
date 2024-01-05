@@ -1,7 +1,9 @@
+import "./style.scss";
+
 const Box = ({ title, children }) => {
   return (
-    <div>
-      <span>{title}</span>
+    <div className="filter-box">
+      <span className="box-title">{title}</span>
       {children}
     </div>
   );

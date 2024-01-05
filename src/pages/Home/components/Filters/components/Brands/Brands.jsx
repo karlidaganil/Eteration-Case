@@ -1,4 +1,4 @@
-import Box from "../Box";
+import Box from "../Box/Box";
 
 const Brands = () => {
   return <Box title="Brands">FORM</Box>;

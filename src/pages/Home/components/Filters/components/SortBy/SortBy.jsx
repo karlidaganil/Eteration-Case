@@ -1,4 +1,4 @@
-import Box from "../Box";
+import Box from "../Box/Box";
 
 const SortBy = () => {
   return <Box title="Sort By">FORM</Box>;
