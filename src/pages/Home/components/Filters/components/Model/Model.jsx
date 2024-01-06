@@ -8,7 +8,7 @@ import useStore from "../../../../../../store";
 import { useState } from "react";
 
 const Model = () => {
-  const { productList } = useStore((state) => state);
+  const { productList, setGlobalFilter } = useStore((state) => state);
   const [searchValue, setSearchValue] = useState("");
 
   // find unique models
@@ -28,6 +28,7 @@ const Model = () => {
 
   const onChange = (checkedValues) => {
     console.log("checked = ", checkedValues);
+    setGlobalFilter({ models: checkedValues });
   };
   return (
     <Box title="Model">
@@ -40,7 +41,6 @@ const Model = () => {
         <Checkbox.Group
           className="checkbox-vertical"
           options={filteredModels}
-          defaultValue={["Pear"]}
           onChange={onChange}
         />
       </div>

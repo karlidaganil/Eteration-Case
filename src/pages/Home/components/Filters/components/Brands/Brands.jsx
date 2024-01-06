@@ -8,7 +8,7 @@ import useStore from "../../../../../../store";
 import { useState } from "react";
 
 const Brands = () => {
-  const { productList } = useStore((state) => state);
+  const { productList, setGlobalFilter } = useStore((state) => state);
   const [searchValue, setSearchValue] = useState("");
 
   // find unique brands
@@ -28,6 +28,7 @@ const Brands = () => {
 
   const onChange = (checkedValues) => {
     console.log("checked = ", checkedValues);
+    setGlobalFilter({ brands: checkedValues });
   };
   return (
     <Box title="Brands">

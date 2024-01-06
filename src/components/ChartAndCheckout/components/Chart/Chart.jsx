@@ -5,15 +5,12 @@ import "./style.scss";
 
 const Chart = () => {
   const { chartList } = useStore((state) => state);
-  console.log(chartList);
 
   const uniqueList = [
     ...new Set(
       chartList.sort((a, b) => a.order - b.order).map((item) => item.id)
     ),
   ]; // [ 'A', 'B']
-
-  console.log(uniqueList);
 
   return (
     <Box title="Chart" className="height-unset">

@@ -6,12 +6,20 @@ import { SearchOutlined } from "@ant-design/icons";
 import useStore from "../../store";
 
 const Header = () => {
-  const { getTotaPriceOfChart } = useStore((state) => state);
+  const { getTotaPriceOfChart, setGlobalFilter, globalFilter } = useStore(
+    (state) => state
+  );
+
+  console.log(globalFilter);
 
   return (
     <header>
       <h3>Eteration</h3>
-      <Input placeholder="Search" prefix={<SearchOutlined />} />
+      <Input
+        placeholder="Search"
+        prefix={<SearchOutlined />}
+        onChange={(e) => setGlobalFilter({ searchKey: e.target.value })}
+      />
       <div>
         <img src={Portfeil} alt="prort" />
         <span> {getTotaPriceOfChart()}$ </span>

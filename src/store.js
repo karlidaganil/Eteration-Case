@@ -1,9 +1,18 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
+import sortByEnum from "./enums/sortByEnum";
 
 const useStore = create(
   persist(
     (set, get) => ({
+      globalFilter: {
+        searchKey: "",
+        brands: "",
+        models: "",
+        sortBy: sortByEnum.NEWEST,
+      },
+      setGlobalFilter: (globalFilter) =>
+        set({ globalFilter: { ...get().globalFilter, ...globalFilter } }),
       productList: [],
       setProductList: (productList) => set({ productList }),
       chartList: [],
