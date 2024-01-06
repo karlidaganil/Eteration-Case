@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Radio, Space } from "antd";
 import Box from "../../../../../../components/Box/Box";
 import sortByEnum from "../../../../../../enums/sortByEnum";
