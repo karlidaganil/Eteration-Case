@@ -19,8 +19,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    span {
-      white-space: pre;
+    .icon-portfeil {
+      margin-right: 10px;
+    }
+    .icon-profile {
+      margin-right: 5px;
+    }
+    .total {
+      margin-right: 15px;
     }
   }
 }

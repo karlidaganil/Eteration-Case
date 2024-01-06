@@ -20,10 +20,10 @@ const Header = () => {
         value={globalFilter.searchKey}
       />
       <div>
-        <img src={Portfeil} alt="prort" />
-        <span> {getTotaPriceOfChart()}$ </span>
-        <img src={Profile} alt="profile" />
-        <span> Anıl</span>
+        <img src={Portfeil} alt="prort" className="icon-portfeil" />
+        <span className="total">{getTotaPriceOfChart()}$</span>
+        <img src={Profile} alt="profile" className="icon-profile" />
+        <span>Anıl</span>
       </div>
     </header>
   );
