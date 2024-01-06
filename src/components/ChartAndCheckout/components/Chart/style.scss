@@ -1,0 +1,18 @@
+.chart-item-container {
+  display: flex;
+  justify-content: space-between;
+  .text-price-container {
+    .name {
+      font-size: 12px;
+    }
+    .price {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2a59fe;
+    }
+  }
+}
+
+.height-unset {
+  max-height: unset;
+}

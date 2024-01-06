@@ -1,8 +1,8 @@
 import "./style.scss";
 
-const Box = ({ title, children }) => {
+const Box = ({ title, children, className }) => {
   return (
-    <div className="filter-box">
+    <div className={`box-container ${className}`}>
       <span className="box-title">{title}</span>
       {children}
     </div>

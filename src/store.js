@@ -9,13 +9,24 @@ const useStore = create(
       chartList: [],
       addToChart: (product) => {
         const chartList = [...get().chartList];
+        const maxOrder =
+          chartList.length === 0
+            ? 0
+            : Math.max(...chartList.map((p) => p.order));
+        chartList.push({ ...product, order: maxOrder + 1 });
+        set({ chartList });
+      },
+      incrementQuantity: (id) => {
+        const chartList = [...get().chartList];
+        const product = chartList.find((product) => product.id === id);
         chartList.push(product);
         set({ chartList });
       },
-      removeFromChart: (id) => {
+      decrementQuantity: (id) => {
         const chartList = [...get().chartList];
-        const index = chartList.findIndex((product) => product.id === id);
-        chartList.splice(index, 1);
+        const product = chartList.find((product) => product.id === id);
+        // remove product from chartList
+        chartList.splice(chartList.indexOf(product), 1);
         set({ chartList });
       },
       clearChart: () => set({ chartList: [] }),

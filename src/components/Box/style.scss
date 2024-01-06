@@ -1,4 +1,4 @@
-.filter-box {
+.box-container {
   background-color: white;
   width: 220px;
   margin-bottom: 30px;
@@ -6,7 +6,6 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   padding: 20px;
   max-height: 180px;
-  // overflow-y: auto;
   .box-title {
     position: absolute;
     top: -20px;

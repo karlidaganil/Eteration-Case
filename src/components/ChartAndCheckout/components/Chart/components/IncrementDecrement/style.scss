@@ -1,0 +1,21 @@
+.increment-decrement-container {
+  display: flex;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: #c4c4c4;
+    margin-top: 2px;
+    &:is(.count) {
+      width: 25px;
+      height: 25px;
+      background-color: #2a59fe;
+      margin-top: 0px;
+      color: #fff;
+      border-radius: 0px;
+    }
+  }
+}
