@@ -5,6 +5,11 @@ import sortByEnum from "./enums/sortByEnum";
 const useStore = create(
   persist(
     (set, get) => ({
+      checkout: [],
+      setCheckout: () => {
+        const chartList = [...get().chartList];
+        set({ checkout: chartList });
+      },
       globalFilter: {
         searchKey: "",
         brands: [],
