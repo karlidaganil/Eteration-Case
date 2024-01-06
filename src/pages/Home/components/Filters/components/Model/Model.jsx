@@ -4,22 +4,20 @@ import { SearchOutlined } from "@ant-design/icons";
 import Box from "../../../../../../components/Box/Box";
 
 import "./style.scss";
+import useStore from "../../../../../../store";
 
-const options = [
-  {
-    label: "11",
-    value: "Apple",
-  },
-  {
-    label: "12 Pro",
-    value: "Pear",
-  },
-  {
-    label: "13 Pro Max",
-    value: "Orange",
-  },
-];
 const Model = () => {
+  const { productList } = useStore((state) => state);
+
+  // find unique brands
+  const uniqueModels = [...new Set(productList.map((item) => item.model))].map(
+    (model) => {
+      return {
+        label: model,
+        value: model,
+      };
+    }
+  );
   const onChange = (checkedValues) => {
     console.log("checked = ", checkedValues);
   };
@@ -29,7 +27,7 @@ const Model = () => {
       <div className="overFlow-container">
         <Checkbox.Group
           className="checkbox-vertical"
-          options={options}
+          options={uniqueModels}
           defaultValue={["Pear"]}
           onChange={onChange}
         />

@@ -4,34 +4,21 @@ import { SearchOutlined } from "@ant-design/icons";
 import Box from "../../../../../../components/Box/Box";
 
 import "./style.scss";
+import useStore from "../../../../../../store";
 
-const options = [
-  {
-    label: "Apple",
-    value: "Apple",
-  },
-  {
-    label: "Pear",
-    value: "Pear",
-  },
-  {
-    label: "Orange",
-    value: "Orange",
-  },
-  {
-    label: "Apple",
-    value: "Apple1",
-  },
-  {
-    label: "Pear",
-    value: "Pear2",
-  },
-  {
-    label: "Orange",
-    value: "Orange3",
-  },
-];
 const Brands = () => {
+  const { productList } = useStore((state) => state);
+
+  // find unique brands
+  const uniqueBrands = [...new Set(productList.map((item) => item.brand))].map(
+    (brand) => {
+      return {
+        label: brand,
+        value: brand,
+      };
+    }
+  );
+
   const onChange = (checkedValues) => {
     console.log("checked = ", checkedValues);
   };
@@ -41,7 +28,7 @@ const Brands = () => {
       <div className="overFlow-container">
         <Checkbox.Group
           className="checkbox-vertical"
-          options={options}
+          options={uniqueBrands}
           defaultValue={["Pear"]}
           onChange={onChange}
         />
