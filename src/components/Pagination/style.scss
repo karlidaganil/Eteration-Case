@@ -1,0 +1,21 @@
+.pagination-container {
+  display: contents;
+  .aritmatic-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: #c4c4c4;
+      &:is(.active) {
+        background-color: white;
+        border-radius: 8px;
+        color: #2a59fe;
+      }
+    }
+  }
+}
