@@ -8,7 +8,9 @@ import useStore from "../../../../../../store";
 import { useState } from "react";
 
 const Brands = () => {
-  const { productList, setGlobalFilter } = useStore((state) => state);
+  const { productList, setGlobalFilter, globalFilter } = useStore(
+    (state) => state
+  );
   const [searchValue, setSearchValue] = useState("");
 
   // find unique brands
@@ -42,6 +44,7 @@ const Brands = () => {
           className="checkbox-vertical"
           options={filteredBrands}
           onChange={onChange}
+          value={globalFilter.brands}
         />
       </div>
     </Box>

@@ -7,8 +7,8 @@ const useStore = create(
     (set, get) => ({
       globalFilter: {
         searchKey: "",
-        brands: "",
-        models: "",
+        brands: [],
+        models: [],
         sortBy: sortByEnum.NEWEST,
       },
       setGlobalFilter: (globalFilter) =>

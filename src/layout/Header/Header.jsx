@@ -10,8 +10,6 @@ const Header = () => {
     (state) => state
   );
 
-  console.log(globalFilter);
-
   return (
     <header>
       <h3>Eteration</h3>
@@ -19,6 +17,7 @@ const Header = () => {
         placeholder="Search"
         prefix={<SearchOutlined />}
         onChange={(e) => setGlobalFilter({ searchKey: e.target.value })}
+        value={globalFilter.searchKey}
       />
       <div>
         <img src={Portfeil} alt="prort" />
