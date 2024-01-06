@@ -8,7 +8,7 @@ const useStore = create(
       checkout: [],
       setCheckout: () => {
         const chartList = [...get().chartList];
-        set({ checkout: chartList });
+        set({ checkout: chartList, chartList: [] });
       },
       globalFilter: {
         searchKey: "",
