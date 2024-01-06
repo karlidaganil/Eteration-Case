@@ -19,9 +19,10 @@ const List = () => {
       style={{
         paddingLeft: "30px",
         paddingRight: "30px",
+        width: "100%",
       }}
     >
-      <Row nogutter={true}>
+      <Row>
         {filteredProducts.map((product) => (
           <Col xl={3} key={product.id}>
             <Item {...product} />
