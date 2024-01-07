@@ -28,10 +28,9 @@ const Model = () => {
     item.label.toLowerCase().includes(searchValue.toLowerCase())
   );
 
-  const onChange = (checkedValues) => {
-    console.log("checked = ", checkedValues);
+  const onChange = (checkedValues) =>
     setGlobalFilter({ models: checkedValues });
-  };
+
   return (
     <Box title="Model">
       <Input

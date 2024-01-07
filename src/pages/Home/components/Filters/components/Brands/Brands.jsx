@@ -29,7 +29,6 @@ const Brands = () => {
   );
 
   const onChange = (checkedValues) => {
-    console.log("checked = ", checkedValues);
     setGlobalFilter({ brands: checkedValues });
   };
   return (

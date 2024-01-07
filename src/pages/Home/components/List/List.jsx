@@ -4,25 +4,17 @@ import useGetProducts from "../../hooks/useGetProducts";
 import useStore from "../../../../store";
 import getFilteredProducts from "./helpers/getFilteredProducts";
 import Pagination from "../../../../components/Pagination/Pagination";
+import "./style.scss";
 
 const List = () => {
   const { products, isLoading, error } = useGetProducts();
   const { globalFilter } = useStore((state) => state);
-  console.log(globalFilter);
 
   // filter products by global filter
   const filteredProducts = getFilteredProducts(products, globalFilter);
 
-  console.log(filteredProducts);
-
   return (
-    <div
-      style={{
-        paddingLeft: "30px",
-        paddingRight: "30px",
-        width: "100%",
-      }}
-    >
+    <div className="list-container">
       <Row>
         <Pagination>
           {filteredProducts.map((product) => (

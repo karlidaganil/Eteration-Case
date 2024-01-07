@@ -11,7 +11,6 @@ const Pagination = ({ children, itemsPerPage = 12 }) => {
   const totalPages =
     totalItems > itemsPerPage ? Math.ceil(totalItems / itemsPerPage) : 1;
 
-  console.log(totalPages);
   const goToNextPage = () => {
     setStartIndex((prev) => prev + itemsPerPage);
     setCurrentPage(currentPage + 1);
