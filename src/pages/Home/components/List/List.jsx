@@ -2,7 +2,7 @@ import { Col, Row } from "react-grid-system";
 import Item from "./components/Item";
 import useGetProducts from "../../hooks/useGetProducts";
 import useStore from "../../../../store";
-import getFilteredProducts from "./getFilteredProducts";
+import getFilteredProducts from "./helpers/getFilteredProducts";
 import Pagination from "../../../../components/Pagination/Pagination";
 
 const List = () => {

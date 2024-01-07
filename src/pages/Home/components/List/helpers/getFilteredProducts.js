@@ -1,4 +1,4 @@
-import sortByEnum from "../../../../enums/sortByEnum";
+import sortByEnum from "../../../../../enums/sortByEnum";
 
 const getFilteredProducts = (products, globalFilter) => {
   return products
