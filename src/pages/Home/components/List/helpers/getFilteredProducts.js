@@ -1,4 +1,4 @@
-import sortByEnum from "../../../../../enums/sortByEnum";
+import SortByEnum from "../../../../../enums/sortByEnum";
 
 const getFilteredProducts = (products, globalFilter) => {
   return products
@@ -20,13 +20,13 @@ const getFilteredProducts = (products, globalFilter) => {
       return modelFilter && brandFilter && searchFilter;
     })
     .sort((a, b) => {
-      if (globalFilter.sortBy === sortByEnum.HIGHEST) {
+      if (globalFilter.sortBy === SortByEnum.HIGHEST) {
         return parseFloat(b.price) - parseFloat(a.price);
-      } else if (globalFilter.sortBy === sortByEnum.LOWEST) {
+      } else if (globalFilter.sortBy === SortByEnum.LOWEST) {
         return parseFloat(a.price) - parseFloat(b.price);
-      } else if (globalFilter.sortBy === sortByEnum.NEWEST) {
+      } else if (globalFilter.sortBy === SortByEnum.NEWEST) {
         return new Date(b.createdAt) - new Date(a.createdAt);
-      } else if (globalFilter.sortBy === sortByEnum.OLDEST) {
+      } else if (globalFilter.sortBy === SortByEnum.OLDEST) {
         return new Date(a.createdAt) - new Date(b.createdAt);
       } else {
         return a.id - b.id;

@@ -1,7 +1,7 @@
 import { Radio, Space } from "antd";
 import Box from "../../../../../../components/Box/Box";
-import sortByEnum from "../../../../../../enums/sortByEnum";
 import useStore from "../../../../../../store";
+import SortByEnum from "../../../../../../enums/sortByEnum";
 
 const SortBy = () => {
   const { setGlobalFilter, globalFilter } = useStore((state) => state);
@@ -14,10 +14,10 @@ const SortBy = () => {
     <Box title="Sort By">
       <Radio.Group onChange={onChange} value={globalFilter.sortBy}>
         <Space direction="vertical">
-          <Radio value={sortByEnum.NEWEST}>New to old</Radio>
-          <Radio value={sortByEnum.OLDEST}>Old to new</Radio>
-          <Radio value={sortByEnum.HIGHEST}>Price hight to low</Radio>
-          <Radio value={sortByEnum.LOWEST}>Price low to High </Radio>
+          <Radio value={SortByEnum.NEWEST}>New to old</Radio>
+          <Radio value={SortByEnum.OLDEST}>Old to new</Radio>
+          <Radio value={SortByEnum.HIGHEST}>Price hight to low</Radio>
+          <Radio value={SortByEnum.LOWEST}>Price low to High </Radio>
         </Space>
       </Radio.Group>
     </Box>
